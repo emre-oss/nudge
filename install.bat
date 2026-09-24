@@ -33,6 +33,9 @@ set TMP_DIR=%TEMP%\nudge_install
 echo  Creating installation directory...
 if not exist "%INSTALL_DIR%" mkdir "%INSTALL_DIR%"
 
+echo  Creating temp directory...
+if not exist "%TMP_DIR%" mkdir "%TMP_DIR%"
+
 echo  Downloading Nudge %VERSION%...
 powershell -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%TMP_DIR%\nudge.zip'"
 
